@@ -4001,7 +4001,7 @@
 											"top": 1500,
 											"width": 62,
 											"height": 13,
-											"text": "시스템 종료"
+											"text": "종료"
 										},
 										{
 											"_type": "LabelView",
@@ -5563,7 +5563,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGWlg1l2s0uhqw="
 					},
-					"name": "시스템 종료"
+					"name": "종료"
 				}
 			]
 		}
