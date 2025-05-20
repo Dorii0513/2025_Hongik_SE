@@ -1,3 +1,5 @@
+팀 코드: 20005
+깃 허브 주소: https://github.com/Dorii0513/2025_Hongik_SE
 # 📋 Requirement List
 
 ## 1. Functional Requirements
