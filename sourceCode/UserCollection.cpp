@@ -7,7 +7,7 @@
 	전달 인자 : 없음
 	반환값    : 없음
 */
-bool UserCollection::login(const string& id, const string& password)
-{
 
+void UserCollection::addNewUser(const Member& member) {
+	members.push_back(member);
 }

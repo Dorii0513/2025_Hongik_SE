@@ -21,9 +21,7 @@ class UserCollection
         bool login(const string& id, const string& password);
         void logout();
         User* getLoggedInUser() const;
-        void addNewUser(const Member& member) {
-            members.push_back(member);
-        }
+        void addNewUser(const Member& member);
 };
 
 #endif

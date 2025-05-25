@@ -17,16 +17,15 @@ using namespace std;
 
 // 함수 선언
 void doTask();
-void join();
 void program_exit();
 
 // 변수 선언
 ofstream out_fp;
 ifstream in_fp;
 
-UserCollection userCollection; 
+UserCollection userCollection;
 AddUser addUser(userCollection);
-AddUserUI ui(&addUser);
+AddUserUI addUserUI(&addUser);
 
 int main()
 {
@@ -62,7 +61,7 @@ void doTask()
                     case 1: // "1.1. 회원가입" 메뉴 부분
                     {
                         // 해당 기능 수행
-                        ui.join(in_fp, out_fp);
+                        addUserUI.join(in_fp, out_fp);
                         is_program_exit = 1;
                         break;
                     }

@@ -11,7 +11,6 @@ protected:
     Account account;
 public:
     User(const Account& acc) : account(acc) {}
-    virtual ~User() = default;
     // virtual string getRole() const = 0;
     string getId() const { 
         return account.getId(); 
