@@ -11,9 +11,7 @@ private:
     string phoneNumber;
 
 public:
-    Account(const string& id, const string& pw, const string& phone)
-        : id(id), password(pw), phoneNumber(phone) {}
-
+    Account(const string& id, const string& pw, const string& phone);
     string getId() const { return id; }
     string getPassword() const { return password; }
 };

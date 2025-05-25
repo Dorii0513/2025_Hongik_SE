@@ -7,10 +7,10 @@
 
 class AddUser {
 private:
-    UserCollection& userCollection;
+    UserCollection* userCollection;
 
 public:
-    AddUser(UserCollection& uc);
+    AddUser(UserCollection* uc);
     void addNewUser(const std::string& id, const std::string& pw, const std::string& phoneNumber);
 };
 

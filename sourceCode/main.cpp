@@ -23,10 +23,6 @@ void program_exit();
 ofstream out_fp;
 ifstream in_fp;
 
-UserCollection userCollection;
-AddUser addUser(userCollection);
-AddUserUI addUserUI(&addUser);
-
 int main()
 {
     // 파일 입출력을 위한 초기화
@@ -42,6 +38,9 @@ int main()
 
 void doTask()
 {
+    UserCollection* userCollection = new UserCollection();
+    AddUser* addUser = new AddUser(userCollection);
+
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
     int is_program_exit = 0;
@@ -61,7 +60,9 @@ void doTask()
                     case 1: // "1.1. 회원가입" 메뉴 부분
                     {
                         // 해당 기능 수행
-                        addUserUI.join(in_fp, out_fp);
+                        AddUserUI* addUserUI = new AddUserUI(addUser);
+
+                        addUserUI->join(in_fp, out_fp);
                         is_program_exit = 1;
                         break;
                     }

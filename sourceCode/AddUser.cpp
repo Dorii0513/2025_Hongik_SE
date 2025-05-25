@@ -2,16 +2,21 @@
 #include "UserCollection.h"
 
 // 생성자 정의
-AddUser::AddUser(UserCollection& uc)
-  : userCollection(uc)
-{}
+AddUser::AddUser(UserCollection* uc): userCollection(uc){}
 
-// addNewUser 메서드 정의
+/*
+	함수 이름 : addNewUser
+	기능	  : 전달 받은 id, pw, phoneNumber를 통해 새로운 Account를 생성하고, 이를 통해 Memeber(회원)을 생성하여 전체 user를 관리하는 UserCollection에 넣어준다.
+	전달 인자 : const std::string& id -> 아이디
+            const std::string& pw -> 비밀번호
+            const std::string& phoneNumber -> 핸드폰 번호
+	반환값    : 없음
+*/
 void AddUser::addNewUser(const std::string& id,
                          const std::string& pw,
                          const std::string& phoneNumber) {
 
     Account newAccount(id, pw, phoneNumber);
     Member newMember(newAccount);
-    userCollection.addNewUser(newMember);
+    userCollection->addNewUser(newMember);
 }
