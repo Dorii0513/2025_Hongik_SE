@@ -2,7 +2,12 @@
 #include "UserCollection.h"
 #include "User.h"
 
-// 생성자 정의
+/*
+	함수 이름 : AddUser
+	기능	  : AddUser control 클래스 생성자
+	전달 인자 : UserCollection* uc -> 회원가입한 user를 저장하기 위함
+	반환값    : 없음
+*/
 AddUser::AddUser(UserCollection* uc):userCollection(uc){}
 
 /*

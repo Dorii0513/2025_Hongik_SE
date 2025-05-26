@@ -6,9 +6,9 @@
 
 class LoginUI {
 private:
-    Login* login;
+    Login* login;   // login control클래스
 public:
-    LoginUI(Login* login);
+    LoginUI(Login* ctrl);
     void tryLogin(std::ifstream& in_fp, std::ofstream& out_fp);
 };
 

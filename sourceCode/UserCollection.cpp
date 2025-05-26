@@ -25,11 +25,17 @@ UserCollection::UserCollection() {
 	전달 인자 : const Member& member -> 회원가입한 Member 데이터
 	반환값    : 없음
 */
-
 void UserCollection::addNewUser(User* user) {
 	users.push_back(user);
 }
 
+/*
+	함수 이름 : loginUser
+	기능	  : 입력받은 id와  password가 userCollection의 users에 저장된 Account 중 일치하는 항목이 있는지 확인한다.
+	전달 인자 : cstd::string inputID -> input.txt에 입력한 id 값
+              std::string inputPW -> input.txt에 입력한 password 값
+	반환값    : login 성공 여부를 bool 값으로 반환
+*/
 bool UserCollection::loginUser(std::string inputID, std::string inputPW) {
 	int n = users.size();
 	for (int i = 0; i < n; i++) {

@@ -1,10 +1,16 @@
 #include "AddUserUI.h"
 #include "AddUser.h"
 
+/*
+	함수 이름 : AddUserUI 
+	기능	  : AddUser boundary 클래스 생성자
+	전달 인자 : AddUser* ctrl -> AddUser control 클래스
+	반환값    : 없음
+*/
 AddUserUI::AddUserUI(AddUser* ctrl): control(ctrl){}
 
 /*
-	함수 이름 : AddUserUI::join(std::ifstream& in_fp, std::ofstream& out_fp)
+	함수 이름 : join
 	기능	  : in_fp 파일로부터 전달 받은 회원가입을 위한 id, pw, phoneNumber 정보를 Control 클래스를 통해 UserCollection에 저장하고, 입력한 회원 가입 정보를 출력함.
 	전달 인자 : std::ifstream& in_fp, std::ofstream& out_fp -> 입력 및 출력 값
 	반환값    : 없음

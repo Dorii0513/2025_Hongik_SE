@@ -6,7 +6,7 @@
 
 class AddUserUI {
 private:
-    AddUser* control;
+    AddUser* control;       //AddUser control 클래스
 
 public:
     AddUserUI(AddUser* ctrl);
