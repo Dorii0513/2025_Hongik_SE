@@ -7,7 +7,6 @@ class Admin: public User
 {
 public:
     Admin();
-    void regsterBike();
 };
 
 #endif

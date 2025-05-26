@@ -2,5 +2,5 @@
 2 1 kim pwdpwd
 2 2
 2 1 admin admin
-2 2
+3 1 b1 bikeMaker3 1 b2 bikeProducer
 6 1

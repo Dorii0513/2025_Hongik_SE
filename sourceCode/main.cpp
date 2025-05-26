@@ -8,6 +8,8 @@
 #include "AddUser.h"
 #include "LoginUI.h"
 #include "LogoutUI.h"
+#include "AddBike.h"
+#include "AddBikeUI.h"
 
 
 using namespace std;
@@ -39,8 +41,10 @@ int main()
 }
 
 void doTask()
-{
+{   
+    //객체 선언
     UserCollection* userCollection = new UserCollection();
+    BikeCollection* bikeCollection = new BikeCollection();
     
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
@@ -90,6 +94,21 @@ void doTask()
                     break;
                 }
                 break;
+            }
+            case 3:
+            {
+                switch (menu_level_2)
+                {
+                    case 1: 
+                    {
+                        AddBike* addBike = new AddBike(bikeCollection);
+                        AddBikeUI* addBikeUI = new AddBikeUI(addBike);
+                        addBikeUI->rentBike(in_fp, out_fp);
+                        break;
+                    }
+                    break;
+                }
+                break;   
             }
             case 6:
             {
