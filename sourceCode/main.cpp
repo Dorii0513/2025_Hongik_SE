@@ -6,6 +6,7 @@
 #include "UserCollection.h"
 #include "AddUserUI.h"
 #include "AddUser.h"
+#include "LoginUI.h"
 
 
 using namespace std;
@@ -39,8 +40,7 @@ int main()
 void doTask()
 {
     UserCollection* userCollection = new UserCollection();
-    AddUser* addUser = new AddUser(userCollection);
-
+    
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
     int is_program_exit = 0;
@@ -60,22 +60,31 @@ void doTask()
                     case 1: // "1.1. 회원가입" 메뉴 부분
                     {
                         // 해당 기능 수행
+                        AddUser* addUser = new AddUser(userCollection);
                         AddUserUI* addUserUI = new AddUserUI(addUser);
-
                         addUserUI->join(in_fp, out_fp);
-                        is_program_exit = 1;
                         break;
                     }
-                    case 2:
-                    {
-                       // ...
-                        break;
-                    }
+                    break;
                 }
                 break;
             }
-            //...
-            case 7:
+            case 2:
+            {
+                switch (menu_level_2){
+                    case 1:  // "2.1. 로그인" 메뉴 부분
+                    {   
+                        Login* login = new Login(userCollection);
+                        LoginUI* loginUI = new LoginUI(login);
+                        loginUI->tryLogin(in_fp, out_fp);
+                        break;
+                    }
+                    break;
+                }
+                break;
+            }
+            is_program_exit = 1;
+            case 6:
             {
                 switch (menu_level_2)
                 {

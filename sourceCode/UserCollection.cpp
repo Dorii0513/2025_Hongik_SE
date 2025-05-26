@@ -1,13 +1,43 @@
 #include <string>
+#include "Account.h"
+#include "Admin.h"
 #include "UserCollection.h"
+
+// UserCollection.cpp
+// std::vector<User*> UserCollection::getAllUsers() const {
+//     return users;
+// }
+
+/*
+	함수 이름 : UserCollection
+	기능	  : UerCollection의 초기 값 지정 이때, user에 Admin의 id, pw 정보를 넣어준다.
+	전달 인자 : 없음
+	반환값    : 없음
+*/
+UserCollection::UserCollection() {
+    Admin* admin = new Admin();
+    users.push_back(admin);
+}
 
 /*
 	함수 이름 : addNewUser
-	기능	  : UerCollection의 멤버변수인 members에 회원가입한 새로운 멤버를 저장한다.
+	기능	  : UerCollection의 멤버변수인 users 회원가입한 새로운 멤버를 저장한다.
 	전달 인자 : const Member& member -> 회원가입한 Member 데이터
 	반환값    : 없음
 */
 
-void UserCollection::addNewUser(const Member& member) {
-	members.push_back(member);
+void UserCollection::addNewUser(User* user) {
+	users.push_back(user);
+}
+
+bool UserCollection::loginUser(std::string inputID, std::string inputPW) {
+	int n = users.size();
+	for (int i = 0; i < n; i++) {
+		string id = users[i]->getAccount().getId();
+		string pw = users[i]->getAccount().getPassword();
+		if (inputID == id && inputPW == pw) {
+			return true;
+		}
+	}
+	return false; 
 }

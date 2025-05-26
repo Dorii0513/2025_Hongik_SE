@@ -9,7 +9,6 @@ class Member: public User {
     private:
         RentedBikeCollection rentedBikes;
     public:
-        Member(const Account& acc) : User(acc) {}
         void rentBike(Bike* bike);
         void getRentedBikes();
 };

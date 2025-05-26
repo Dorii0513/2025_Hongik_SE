@@ -13,15 +13,17 @@ using namespace std;
 class UserCollection
 {
     private:
-        vector<Member> members;
-        Admin admin;
+        vector<User*> users;
         User* loggedInUser;
     public:
-        UserCollection(): admin(Account("admin", "admin", "")){}
-        bool login(const string& id, const string& password);
+        UserCollection();
+        bool loginUser(std::string inputID, std::string inputPW);
+        // UserCollection.h
+        // std::vector<User*> getAllUsers() const;
+        bool login();
         void logout();
         User* getLoggedInUser() const;
-        void addNewUser(const Member& member);
+        void addNewUser(User* user);
 };
 
 #endif

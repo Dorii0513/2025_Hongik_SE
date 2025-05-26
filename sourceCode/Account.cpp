@@ -10,3 +10,11 @@
 */
 Account::Account(const string& id, const string& pw, const string& phone)
         : id(id), password(pw), phoneNumber(phone) {}
+
+string Account::getId() const {
+	return id;
+}
+
+string Account::getPassword() const {
+	return password;
+}

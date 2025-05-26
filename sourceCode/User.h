@@ -7,14 +7,12 @@ using namespace std;
 
 class User
 {
-protected:
+private:
     Account account;
 public:
-    User(const Account& acc) : account(acc) {}
+    explicit User(Account* acc);
     // virtual string getRole() const = 0;
-    string getId() const { 
-        return account.getId(); 
-    }
+    Account getAccount();
 };
 
 #endif

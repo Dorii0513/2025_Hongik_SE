@@ -1,8 +1,9 @@
 #include "AddUser.h"
 #include "UserCollection.h"
+#include "User.h"
 
 // 생성자 정의
-AddUser::AddUser(UserCollection* uc): userCollection(uc){}
+AddUser::AddUser(UserCollection* uc):userCollection(uc){}
 
 /*
 	함수 이름 : addNewUser
@@ -16,7 +17,7 @@ void AddUser::addNewUser(const std::string& id,
                          const std::string& pw,
                          const std::string& phoneNumber) {
 
-    Account newAccount(id, pw, phoneNumber);
-    Member newMember(newAccount);
-    userCollection->addNewUser(newMember);
+    Account* account = new Account(id, pw, phoneNumber);
+    User* user = new User(account);
+    userCollection->addNewUser(user);
 }
