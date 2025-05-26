@@ -14,15 +14,13 @@ class UserCollection
 {
     private:
         vector<User*> users;
-        User* loggedInUser;
     public:
         UserCollection();
         bool loginUser(std::string inputID, std::string inputPW);
         // UserCollection.h
         // std::vector<User*> getAllUsers() const;
-        bool login();
-        void logout();
-        User* getLoggedInUser() const;
+        bool logoutUser();
+        string getLoggedInUserID() const;
         void addNewUser(User* user);
 };
 

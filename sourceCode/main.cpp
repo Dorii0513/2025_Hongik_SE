@@ -7,6 +7,7 @@
 #include "AddUserUI.h"
 #include "AddUser.h"
 #include "LoginUI.h"
+#include "LogoutUI.h"
 
 
 using namespace std;
@@ -79,11 +80,17 @@ void doTask()
                         loginUI->tryLogin(in_fp, out_fp);
                         break;
                     }
+                    case 2:
+                    {
+                        Logout* logout = new Logout(userCollection);
+                        LogoutUI* logoutUI = new LogoutUI(logout);
+                        logoutUI->tryLogout(out_fp);
+                        break;
+                    }
                     break;
                 }
                 break;
             }
-            is_program_exit = 1;
             case 6:
             {
                 switch (menu_level_2)

@@ -18,3 +18,11 @@ User::User(Account* acc) : account(*acc) {}
 Account User::getAccount() {
     return account;
 }
+
+void User::setLoggedIn(bool status) {
+    isLoggedIn = status;
+}
+
+bool User::getLoggedIn() {
+    return isLoggedIn;
+}

@@ -42,8 +42,28 @@ bool UserCollection::loginUser(std::string inputID, std::string inputPW) {
 		string id = users[i]->getAccount().getId();
 		string pw = users[i]->getAccount().getPassword();
 		if (inputID == id && inputPW == pw) {
+			users[i]->setLoggedIn(true);
 			return true;
 		}
 	}
 	return false; 
+}
+
+bool UserCollection::logoutUser() {
+	for (User* user : users) {
+		if (user->getLoggedIn()) {
+			user->setLoggedIn(false);
+			return true;
+		}
+	}
+	return false;
+}
+
+string UserCollection::getLoggedInUserID() const {
+	for (User* user : users) {
+		if (user->getLoggedIn()) {
+			return user->getAccount().getId();
+		}
+	}
+	return ""; 
 }
