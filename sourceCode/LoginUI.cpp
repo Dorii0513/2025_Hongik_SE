@@ -25,6 +25,7 @@ void LoginUI::tryLogin(std::ifstream& in_fp, std::ofstream& out_fp){
 
     if (login->loginUser(id, pw) == 1) {
         out_fp << "2.1. 로그인" << std::endl;
-        out_fp << id << " " << pw << " " << std::endl;
+        out_fp << "> " << id << " " << pw << " " << std::endl;
+        out_fp << std::endl;
     }
 }

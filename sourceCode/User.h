@@ -12,7 +12,6 @@ private:
     bool isLoggedIn = false;    //login한 상태인지 확인
 public:
     explicit User(Account* acc);
-    // virtual string getRole() const = 0;
     Account getAccount();
     void setLoggedIn(bool status);
     bool getLoggedIn();

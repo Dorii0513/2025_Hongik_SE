@@ -23,5 +23,6 @@ void AddUserUI::join(std::ifstream& in_fp, std::ofstream& out_fp)
     control->addNewUser(id, pw, phoneNumber);  // AddUser의 기능 호출
 
     out_fp << "1.1. 회원가입" << std::endl;
-    out_fp << id << " " << pw << " " << phoneNumber << " " << std::endl;
+    out_fp << "> " << id << " " << pw << " " << phoneNumber << " " << std::endl;
+	out_fp << std::endl;
 }

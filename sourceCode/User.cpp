@@ -19,10 +19,22 @@ Account User::getAccount() {
     return account;
 }
 
+/*
+	함수 이름 : setLoggedIn
+	기능	  : User의 isLoggedIn 상태를 변경한다.
+	전달 인자 : 없음
+	반환값    : 없음
+*/
 void User::setLoggedIn(bool status) {
     isLoggedIn = status;
 }
 
+/*
+	함수 이름 : setLoggedIn
+	기능	  : User의 isLoggedIn 상태를 반환한다.
+	전달 인자 : 없음
+	반환값    : isLoggedIn 값 반환
+*/
 bool User::getLoggedIn() {
     return isLoggedIn;
 }

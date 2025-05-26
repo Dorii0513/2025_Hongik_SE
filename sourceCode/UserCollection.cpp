@@ -49,20 +49,11 @@ bool UserCollection::loginUser(std::string inputID, std::string inputPW) {
 	return false; 
 }
 
-bool UserCollection::logoutUser() {
-	for (User* user : users) {
-		if (user->getLoggedIn()) {
-			user->setLoggedIn(false);
-			return true;
-		}
-	}
-	return false;
-}
-
-string UserCollection::getLoggedInUserID() const {
+string UserCollection::getLoggedInID() const {
 	for (User* user : users) {
 		if (user->getLoggedIn()) {
 			return user->getAccount().getId();
+			user->setLoggedIn(false);
 		}
 	}
 	return ""; 

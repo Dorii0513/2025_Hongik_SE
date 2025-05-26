@@ -1,10 +1,15 @@
 1.1. 회원가입
-kim pwdpwd 01011111111 
+> kim pwdpwd 01011111111 
+
 2.1. 로그인
-kim pwdpwd 
+> kim pwdpwd 
+
 2.2. 로그아웃
-kim 
+> kim
+
 2.1. 로그인
-admin admin 
+> admin admin 
+
 2.2. 로그아웃
-admin 
+> admin
+

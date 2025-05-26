@@ -19,8 +19,7 @@ class UserCollection
         bool loginUser(std::string inputID, std::string inputPW);
         // UserCollection.h
         // std::vector<User*> getAllUsers() const;
-        bool logoutUser();
-        string getLoggedInUserID() const;
+        string getLoggedInID() const;
         void addNewUser(User* user);
 };
 
