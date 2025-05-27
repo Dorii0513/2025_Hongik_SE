@@ -7,6 +7,9 @@ class Admin: public User
 {
 public:
     Admin();
+public:
+    void addRentedBike(Bike* bike) override;
+    std::vector<Bike*> getRentedBikes() override;
 };
 
 #endif

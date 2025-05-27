@@ -1,5 +1,6 @@
 #include "AddUser.h"
 #include "UserCollection.h"
+#include "Member.h"
 #include "User.h"
 
 /*
@@ -23,6 +24,6 @@ void AddUser::addNewUser(const std::string& id,
                          const std::string& phoneNumber) {
 
     Account* account = new Account(id, pw, phoneNumber);
-    User* user = new User(account);
+    User* user = new Member(account);
     userCollection->addNewUser(user);
 }

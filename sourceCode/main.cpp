@@ -12,6 +12,8 @@
 #include "AddBikeUI.h"
 #include "RentBike.h"
 #include "RentBikeUI.h"
+#include "ListRentedBike.h"
+#include "ListRentedBikeUI.h"
 
 
 using namespace std;
@@ -72,7 +74,6 @@ void doTask()
                         addUserUI->join(in_fp, out_fp);
                         break;
                     }
-                    break;
                 }
                 break;
             }
@@ -93,7 +94,6 @@ void doTask()
                         logoutUI->tryLogout(out_fp);
                         break;
                     }
-                    break;
                 }
                 break;
             }
@@ -108,7 +108,6 @@ void doTask()
                         addBikeUI->addBike(in_fp, out_fp);
                         break;
                     }
-                    break;
                 }
                 break;   
             }
@@ -118,13 +117,27 @@ void doTask()
                 {
                 case 1: 
                     {
-                        RentBike* rentBike = new RentBike(bikeCollection);
+                        RentBike* rentBike = new RentBike(bikeCollection, userCollection);
                         RentBikeUI* rentBikeUI = new RentBikeUI(rentBike);
                         rentBikeUI->tryRentBike(in_fp, out_fp);
                         break;
                     }
-                    break;
                 }
+                break;
+            }
+            case 5:
+            {
+                switch (menu_level_2)
+                {
+                case 1: 
+                    {
+                        ListRentedBike* listRentedBike = new ListRentedBike(userCollection);
+                        ListRentedBikeUI* listRentedBikeUI = new ListRentedBikeUI(listRentedBike);
+                        listRentedBikeUI->listBikes(out_fp);
+                        break;
+                    }
+                }
+                break;
             }
             case 6:
             {
@@ -139,6 +152,7 @@ void doTask()
                 }
                 break;
             }
+            break;
             //...
         }
     }

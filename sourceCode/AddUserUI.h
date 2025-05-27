@@ -3,6 +3,7 @@
 
 #include "AddUser.h"
 #include <fstream>
+using namespace std;
 
 class AddUserUI {
 private:

@@ -16,5 +16,6 @@ Logout::Logout(UserCollection* uc):userCollection(uc){}
 */
 string Logout::getLoggedInID(){
     User* user = userCollection->getLoggedinUser();
+	user->setLoggedIn(false);
 	return user->getAccount().getId();
 }

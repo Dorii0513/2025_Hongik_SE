@@ -50,22 +50,22 @@ bool UserCollection::loginUser(std::string inputID, std::string inputPW) {
 	return false; 
 }
 
-User* UserCollection::getLoggedinUser() const
+User* UserCollection::getLoggedinUser()
 {
     for (User* user : users) {
-		if (user->getLoggedIn()) {
+		if (user->getLoggedIn() == true) {
 			return user;
 		}
 	}
 	return nullptr; 
 }
 
-string UserCollection::getLoggedInID() const {
-	for (User* user : users) {
-		if (user->getLoggedIn()) {
-			return user->getAccount().getId();
-			user->setLoggedIn(false);
-		}
-	}
-	return ""; 
-}
+// std::string UserCollection::logout() {
+// 	for (User* user : users) {
+// 		if (user->getLoggedIn()) {
+// 			user->setLoggedIn(false);       // 로그인 상태 false로
+// 			return user->getAccount().getId(); // 로그아웃한 유저 ID 반환
+// 		}
+// 	}
+// 	return "";
+// }

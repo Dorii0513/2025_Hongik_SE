@@ -7,10 +7,11 @@
 
 class Member: public User {
     private:
-        RentedBikeCollection rentedBikes;
+        RentedBikeCollection rentedBikeCollection;
     public:
-        void rentBike(Bike* bike);
-        void getRentedBikes();
+        Member(Account* acc);
+        void addRentedBike(Bike* bike) override;
+        std::vector<Bike*> getRentedBikes() override;
 };
 
 #endif

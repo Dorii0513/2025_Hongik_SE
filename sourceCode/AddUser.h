@@ -2,6 +2,7 @@
 #define ADDUSER_H
 
 #include "UserCollection.h"
+#include "RentedBikeCollection.h"
 #include "Account.h"
 #include "Member.h"
 

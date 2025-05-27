@@ -6,4 +6,14 @@
 	전달 인자 : 없음
 	반환값    : 없음
 */
-Admin::Admin() : User(new Account("admin", "admin", "")) {}
+Admin::Admin() : User(new Account("admin", "admin", "")) {
+    setLoggedIn(true);  // 초기 로그인 상태로 처리 (필요시)
+}
+
+void Admin::addRentedBike(Bike* bike) {
+    // Admin은 대여 안 하니까 그냥 비워둠
+}
+
+std::vector<Bike*> Admin::getRentedBikes() {
+    return {};  // 빈 벡터 반환
+}

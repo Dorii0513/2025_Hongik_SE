@@ -1,10 +1,12 @@
 #include "RentBike.h"
 
-RentBike::RentBike(BikeCollection* bc):bikeCollection(bc){}
+RentBike::RentBike(BikeCollection* bc, UserCollection* uc):bikeCollection(bc), userCollection(uc){}
 
 std::string RentBike::getBikeName(std::string bikeID){
-    if (bikeCollection->rentBike(bikeID) == 1){
-        Bike* bike = bikeCollection->getBike();
+    Bike* bike = bikeCollection->rentBike(bikeID);
+    if (bike != nullptr) {
+        User* user = userCollection->getLoggedinUser();
+        user->addRentedBike(bike);
         return bike->getName();
     }
     return "";

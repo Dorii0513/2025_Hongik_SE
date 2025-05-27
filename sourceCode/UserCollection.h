@@ -16,8 +16,7 @@ class UserCollection
     public:
         UserCollection();
         bool loginUser(std::string inputID, std::string inputPW);
-        User* getLoggedinUser() const; 
-        string getLoggedInID() const;
+        User* getLoggedinUser(); 
         void addNewUser(User* user);
 };
 

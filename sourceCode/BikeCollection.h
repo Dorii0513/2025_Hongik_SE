@@ -14,8 +14,7 @@ class BikeCollection
         vector<Bike*> bikes;    // 관리자가 추가한 자전거 목록
     public:
         BikeCollection();
-        bool rentBike(string inputBikeID);
-        Bike* getBike();
+        Bike* rentBike(string inputBikeID);
         void addNewBike(Bike* bike);
 };
 

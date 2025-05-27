@@ -1,8 +1,10 @@
 #ifndef USER_H
 #define USER_H
 #include "Account.h"
+#include "Bike.h"
 
 #include <string>
+#include <vector>
 using namespace std;
 
 class User
@@ -18,6 +20,9 @@ public:
     bool getLoggedIn();
     void setRole(std::string role);
     std::string getRole();
+    virtual void addRentedBike(Bike* bike) = 0;
+    virtual std::vector<Bike*> getRentedBikes() = 0;
+    virtual ~User() = default;
 };
 
 #endif
