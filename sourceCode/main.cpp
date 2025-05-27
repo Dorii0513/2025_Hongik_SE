@@ -14,6 +14,8 @@
 #include "RentBikeUI.h"
 #include "ListRentedBike.h"
 #include "ListRentedBikeUI.h"
+#include "ExitProgram.h"
+#include "ExitProgramUI.h"
 
 
 using namespace std;
@@ -150,6 +152,9 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
                 {
                     case 1: // "6.1. 종료" 메뉴 부분
                     {
+                        ExitProgram exitProgram;
+                        ExitProgramUI exitUI(&exitProgram);
+                        exitUI.exit(out_fp);
                         is_program_exit = 1;
                         break;
                     }
