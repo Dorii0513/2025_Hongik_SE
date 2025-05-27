@@ -18,3 +18,9 @@ void BikeCollection::addNewBike(Bike *bike)
 {
     bikes.push_back(bike);
 }
+
+BikeCollection::~BikeCollection() {
+    for (Bike* bike : bikes) {
+        delete bike;
+    }
+}

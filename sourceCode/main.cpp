@@ -26,6 +26,7 @@ using namespace std;
 // 함수 선언
 void doTask();
 void program_exit();
+void doTask(UserCollection* userCollection, BikeCollection* bikeCollection);
 
 // 변수 선언
 ofstream out_fp;
@@ -37,19 +38,23 @@ int main()
     in_fp.open(INPUT_FILE_NAME);
     out_fp.open(OUTPUT_FILE_NAME);
 
-    doTask();
-    
-    out_fp.close();
-    in_fp.close();
-    return 0;
-}
-
-void doTask()
-{   
     //객체 선언
     UserCollection* userCollection = new UserCollection();
     BikeCollection* bikeCollection = new BikeCollection();
+
+    doTask(userCollection, bikeCollection);
     
+    out_fp.close();
+    in_fp.close();
+
+    delete userCollection;
+    delete bikeCollection;
+
+    return 0;
+}
+
+void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
+{   
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
     int is_program_exit = 0;
@@ -145,7 +150,6 @@ void doTask()
                 {
                     case 1: // "6.1. 종료" 메뉴 부분
                     {
-                        //...
                         is_program_exit = 1;
                         break;
                     }
@@ -153,7 +157,6 @@ void doTask()
                 break;
             }
             break;
-            //...
         }
     }
 }

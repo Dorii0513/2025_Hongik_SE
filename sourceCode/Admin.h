@@ -10,6 +10,7 @@ public:
 public:
     void addRentedBike(Bike* bike) override;
     std::vector<Bike*> getRentedBikes() override;
+    ~Admin() override {};
 };
 
 #endif

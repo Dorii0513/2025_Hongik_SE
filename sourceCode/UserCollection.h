@@ -18,6 +18,7 @@ class UserCollection
         bool loginUser(std::string inputID, std::string inputPW);
         User* getLoggedinUser(); 
         void addNewUser(User* user);
+        ~UserCollection();
 };
 
 #endif

@@ -15,6 +15,7 @@ public:
     std::string getID();
     void setRented(bool status);
     bool getRented();
+    virtual ~Bike();
 };
 
 #endif

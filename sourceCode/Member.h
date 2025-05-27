@@ -12,6 +12,7 @@ class Member: public User {
         Member(Account* acc);
         void addRentedBike(Bike* bike) override;
         std::vector<Bike*> getRentedBikes() override;
+        ~Member() override {};
 };
 
 #endif

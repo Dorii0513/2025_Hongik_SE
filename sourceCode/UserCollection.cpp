@@ -60,12 +60,10 @@ User* UserCollection::getLoggedinUser()
 	return nullptr; 
 }
 
-// std::string UserCollection::logout() {
-// 	for (User* user : users) {
-// 		if (user->getLoggedIn()) {
-// 			user->setLoggedIn(false);       // 로그인 상태 false로
-// 			return user->getAccount().getId(); // 로그아웃한 유저 ID 반환
-// 		}
-// 	}
-// 	return "";
-// }
+UserCollection::~UserCollection() {
+    for (User* user : users) {
+        if (user != nullptr) {
+            delete user;  // Member든 Admin이든
+        }
+    }
+}

@@ -16,6 +16,7 @@ class BikeCollection
         BikeCollection();
         Bike* rentBike(string inputBikeID);
         void addNewBike(Bike* bike);
+        ~BikeCollection();
 };
 
 #endif
