@@ -38,3 +38,11 @@ void User::setLoggedIn(bool status) {
 bool User::getLoggedIn() {
     return isLoggedIn;
 }
+
+void User::setRole(std::string role){
+	userRole = role;
+}
+
+std::string User::getRole(){
+	return userRole;
+}

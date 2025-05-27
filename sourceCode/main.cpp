@@ -101,7 +101,7 @@ void doTask()
                 {
                     case 1: 
                     {
-                        AddBike* addBike = new AddBike(bikeCollection);
+                        AddBike* addBike = new AddBike(bikeCollection,userCollection);
                         AddBikeUI* addBikeUI = new AddBikeUI(addBike);
                         addBikeUI->rentBike(in_fp, out_fp);
                         break;

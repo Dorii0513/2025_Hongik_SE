@@ -16,6 +16,7 @@
 */
 UserCollection::UserCollection() {
     Admin* admin = new Admin();
+	admin->setRole("admin");
     users.push_back(admin);
 }
 
