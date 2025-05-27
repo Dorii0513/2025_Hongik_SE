@@ -15,7 +15,7 @@ class BikeCollection
     public:
         BikeCollection();
         bool rentBike(string inputBikeID);
-        string getBikeName();
+        Bike* getBike();
         void addNewBike(Bike* bike);
 };
 

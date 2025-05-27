@@ -9,7 +9,7 @@ private:
     AddBike* control;   // login control클래스
 public:
     AddBikeUI(AddBike* ctrl);
-    void rentBike(std::ifstream& in_fp, std::ofstream& out_fp);
+    void addBike(std::ifstream& in_fp, std::ofstream& out_fp);
 };
 
 #endif

@@ -14,14 +14,14 @@ bool BikeCollection::rentBike(string inputBikeID)
 	return false; 
 }
 
-string BikeCollection::getBikeName()
+Bike* BikeCollection::getBike()
 {
     for (Bike* bike : bikes) {
 		if (bike->getRented()) {
-			return bike->getName();
+			return bike;
 		}
 	}
-	return ""; 
+	return nullptr; 
 }
 
 void BikeCollection::addNewBike(Bike *bike)

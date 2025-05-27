@@ -50,6 +50,16 @@ bool UserCollection::loginUser(std::string inputID, std::string inputPW) {
 	return false; 
 }
 
+User* UserCollection::getLoggedinUser() const
+{
+    for (User* user : users) {
+		if (user->getLoggedIn()) {
+			return user;
+		}
+	}
+	return nullptr; 
+}
+
 string UserCollection::getLoggedInID() const {
 	for (User* user : users) {
 		if (user->getLoggedIn()) {

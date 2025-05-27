@@ -17,7 +17,7 @@ AddBikeUI::AddBikeUI(AddBike* ctrl): control(ctrl){}
               std::ofstream& out_fp -> output.txt 파일
 	반환값    : 없음
 */
-void AddBikeUI::rentBike(std::ifstream& in_fp, std::ofstream& out_fp){
+void AddBikeUI::addBike(std::ifstream& in_fp, std::ofstream& out_fp){
     std::string bikeID, bikeName;
     in_fp >> bikeID >> bikeName ;
 

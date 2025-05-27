@@ -10,10 +10,11 @@ Logout::Logout(UserCollection* uc):userCollection(uc){}
 
 /*
 	함수 이름 : getLoggedInID 
-	기능	  : userCollection을 통해 getLoggedInID 함수를 호출하며, login되어있는 user의 ID 값을 반환한다.
+	기능	  : userCollection을 통해 getLoggedinUser 함수를 호출하며, login되어있는 user의 ID 값을 반환한다.
 	전달 인자 : 없음
 	반환값    : user의 ID 값을 반환 
 */
 string Logout::getLoggedInID(){
-    return userCollection->getLoggedInID();
+    User* user = userCollection->getLoggedinUser();
+	return user->getAccount().getId();
 }

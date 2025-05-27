@@ -10,6 +10,8 @@
 #include "LogoutUI.h"
 #include "AddBike.h"
 #include "AddBikeUI.h"
+#include "RentBike.h"
+#include "RentBikeUI.h"
 
 
 using namespace std;
@@ -103,12 +105,26 @@ void doTask()
                     {
                         AddBike* addBike = new AddBike(bikeCollection,userCollection);
                         AddBikeUI* addBikeUI = new AddBikeUI(addBike);
-                        addBikeUI->rentBike(in_fp, out_fp);
+                        addBikeUI->addBike(in_fp, out_fp);
                         break;
                     }
                     break;
                 }
                 break;   
+            }
+            case 4:
+            {
+                switch (menu_level_2)
+                {
+                case 1: 
+                    {
+                        RentBike* rentBike = new RentBike(bikeCollection);
+                        RentBikeUI* rentBikeUI = new RentBikeUI(rentBike);
+                        rentBikeUI->tryRentBike(in_fp, out_fp);
+                        break;
+                    }
+                    break;
+                }
             }
             case 6:
             {
