@@ -6,7 +6,7 @@
 
 class AddBikeUI {
 private:
-    AddBike* control;   // login control클래스
+    AddBike* control;   // AddBike control클래스
 public:
     AddBikeUI(AddBike* ctrl);
     void addBike(std::ifstream& in_fp, std::ofstream& out_fp);

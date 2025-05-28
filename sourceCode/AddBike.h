@@ -7,7 +7,7 @@
 
 class AddBike {
 private:
-    BikeCollection* bikeCollection;     
+    BikeCollection* bikeCollection;     //Bike의 목록을 저장, 관리하는 collection class
     UserCollection* userCollection;     //User의 목록을 저장, 관리하는 collection class
 
 public:

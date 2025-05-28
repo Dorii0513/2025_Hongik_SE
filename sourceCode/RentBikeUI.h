@@ -6,7 +6,7 @@
 
 class RentBikeUI {
 private:
-    RentBike* control;   // logout control클래스
+    RentBike* control;   // RentBike control클래스
 public:
     RentBikeUI(RentBike* ctrl);
     void tryRentBike(std::ifstream& in_fp, std::ofstream& out_fp);

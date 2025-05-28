@@ -6,7 +6,7 @@ using namespace std;
 
 class RentedBikeCollection {
 private:
-    std::vector<Bike*> rentedBikes;
+    std::vector<Bike*> rentedBikes; // 대여한 자전거 목록
 public:
     RentedBikeCollection();
     void addRentedBike(Bike* bike);

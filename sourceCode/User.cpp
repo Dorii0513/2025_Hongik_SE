@@ -39,10 +39,22 @@ bool User::getLoggedIn() {
     return isLoggedIn;
 }
 
+/*
+	함수 이름 : setRole
+	기능	  : admin인지 member인지 User의 역할을 정의한다
+	전달 인자 : std::string role -> user의 역할
+	반환값    : 없음
+*/
 void User::setRole(std::string role){
 	userRole = role;
 }
 
+/*
+	함수 이름 : setRole
+	기능	  : 저장된 User의 역할을 정의한다
+	전달 인자 : 없음
+	반환값    : userRole
+*/
 std::string User::getRole(){
 	return userRole;
 }

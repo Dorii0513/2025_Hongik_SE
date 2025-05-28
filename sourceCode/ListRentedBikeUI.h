@@ -6,7 +6,7 @@
 
 class ListRentedBikeUI {
 private:
-    ListRentedBike* control;   // login control클래스
+    ListRentedBike* control;   // ListRentedBike control클래스
 public:
     ListRentedBikeUI(ListRentedBike* ctrl);
     void listBikes(std::ofstream& out_fp);

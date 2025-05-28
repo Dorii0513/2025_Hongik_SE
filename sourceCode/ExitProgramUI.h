@@ -1,12 +1,12 @@
-#ifndef EXIT_PROGRAM_UI_H
-#define EXIT_PROGRAM_UI_H
+#ifndef EXITPROGRAMUI_H
+#define EXITPROGRAMUI_H
 
 #include <fstream>
 #include "ExitProgram.h"
 
 class ExitProgramUI {
 private:
-    ExitProgram* control;
+    ExitProgram* control;    //ExitProgram 컨트롤 클래스
 
 public:
     ExitProgramUI(ExitProgram* ctrl);

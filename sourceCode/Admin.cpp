@@ -10,10 +10,20 @@ Admin::Admin() : User(new Account("admin", "admin", "")) {
     setLoggedIn(true);  // 초기 로그인 상태로 처리 (필요시)
 }
 
-void Admin::addRentedBike(Bike* bike) {
-    // Admin은 대여 안 하니까 그냥 비워둠
-}
+/*
+	함수 이름 : addRentedBike
+	기능	  : 상속받은 User클래스 함수를 오버라이딩한다.
+	전달 인자 : 없음
+	반환값    : 없음
+*/
+void Admin::addRentedBike(Bike* bike) {}
 
+/*
+	함수 이름 : getRentedBikes
+	기능	  : 상속받은 User클래스 함수를 오버라이딩한다.
+	전달 인자 : 없음
+	반환값    : 없음
+*/
 std::vector<Bike*> Admin::getRentedBikes() {
     return {};  // 빈 벡터 반환
 }

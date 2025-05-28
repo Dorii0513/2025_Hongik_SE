@@ -49,6 +49,7 @@ int main()
     out_fp.close();
     in_fp.close();
 
+    // 할당 해제
     delete userCollection;
     delete bikeCollection;
 
@@ -59,7 +60,7 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
 {   
     // 메뉴 파싱을 위한 level 구분을 위한 변수
     int menu_level_1 = 0, menu_level_2 = 0;
-    int is_program_exit = 0;
+    bool is_program_exit = false;
 
     while (!is_program_exit)
     {
@@ -89,13 +90,15 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
                 switch (menu_level_2){
                     case 1:  // "2.1. 로그인" 메뉴 부분
                     {   
+                        //해당 기능 수행
                         Login* login = new Login(userCollection);
                         LoginUI* loginUI = new LoginUI(login);
                         loginUI->tryLogin(in_fp, out_fp);
                         break;
                     }
-                    case 2:
-                    {
+                    case 2: // "2.2. 로그아웃" 메뉴 부분
+                    {   
+                        //해당 기능 수행
                         Logout* logout = new Logout(userCollection);
                         LogoutUI* logoutUI = new LogoutUI(logout);
                         logoutUI->tryLogout(out_fp);
@@ -108,8 +111,9 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
             {
                 switch (menu_level_2)
                 {
-                    case 1: 
+                    case 1: // "3.1. 자전거 등록" 메뉴 부분
                     {
+                        //해당 기능 수행
                         AddBike* addBike = new AddBike(bikeCollection,userCollection);
                         AddBikeUI* addBikeUI = new AddBikeUI(addBike);
                         addBikeUI->addBike(in_fp, out_fp);
@@ -122,8 +126,9 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
             {
                 switch (menu_level_2)
                 {
-                case 1: 
+                case 1: // "4.1. 자전거 대여" 메뉴 부분
                     {
+                        // 해당 기능 수행
                         RentBike* rentBike = new RentBike(bikeCollection, userCollection);
                         RentBikeUI* rentBikeUI = new RentBikeUI(rentBike);
                         rentBikeUI->tryRentBike(in_fp, out_fp);
@@ -136,8 +141,9 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
             {
                 switch (menu_level_2)
                 {
-                case 1: 
+                case 1: // "5.1. 자전거 대여 리스트" 메뉴 부분
                     {
+                        // 해당 기능 수행
                         ListRentedBike* listRentedBike = new ListRentedBike(userCollection);
                         ListRentedBikeUI* listRentedBikeUI = new ListRentedBikeUI(listRentedBike);
                         listRentedBikeUI->listBikes(out_fp);
@@ -152,10 +158,10 @@ void doTask(UserCollection* userCollection, BikeCollection* bikeCollection)
                 {
                     case 1: // "6.1. 종료" 메뉴 부분
                     {
-                        ExitProgram exitProgram;
-                        ExitProgramUI exitUI(&exitProgram);
-                        exitUI.exit(out_fp);
-                        is_program_exit = 1;
+                        // 해당 기능 수행
+                        ExitProgram* exitProgram = new ExitProgram(&is_program_exit);
+                        ExitProgramUI* exitUI = new ExitProgramUI(exitProgram);
+                        exitUI->exit(out_fp);
                         break;
                     }
                 }

@@ -15,7 +15,7 @@ public:
     std::string getID();
     void setRented(bool status);
     bool getRented();
-    virtual ~Bike();
+    virtual ~Bike(){};      //소멸자
 };
 
 #endif

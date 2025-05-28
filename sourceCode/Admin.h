@@ -7,10 +7,9 @@ class Admin: public User
 {
 public:
     Admin();
-public:
     void addRentedBike(Bike* bike) override;
     std::vector<Bike*> getRentedBikes() override;
-    ~Admin() override {};
+    ~Admin() override {};   //소멸자
 };
 
 #endif

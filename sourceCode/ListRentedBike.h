@@ -6,7 +6,7 @@
 
 class ListRentedBike {
 private:
-    UserCollection* userCollection;
+    UserCollection* userCollection;     
 public:
     ListRentedBike(UserCollection* uc);
     std::vector<Bike*> getRentedList();

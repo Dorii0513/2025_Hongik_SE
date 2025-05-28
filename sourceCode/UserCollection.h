@@ -12,7 +12,7 @@ using namespace std;
 class UserCollection
 {
     private:
-        vector<User*> users;
+        vector<User*> users;    //서비스를 이용하는 모든 사용자 목록
     public:
         UserCollection();
         bool loginUser(std::string inputID, std::string inputPW);

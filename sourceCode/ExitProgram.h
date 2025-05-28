@@ -1,9 +1,14 @@
-#ifndef EXIT_PROGRAM_H
-#define EXIT_PROGRAM_H
+#ifndef EXITPROGRAM_H
+#define EXITPROGRAM_H
 
+// ExitProgram.h
 class ExitProgram {
+private:
+    bool* isProgramExit;
+
 public:
-    void doExit();  // 아무 동작 없음, 명시적 종료용
+    ExitProgram(bool* isProgramExit);
+    void doExit();
 };
 
 #endif

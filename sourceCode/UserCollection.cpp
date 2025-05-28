@@ -3,11 +3,6 @@
 #include "Admin.h"
 #include "UserCollection.h"
 
-// UserCollection.cpp
-// std::vector<User*> UserCollection::getAllUsers() const {
-//     return users;
-// }
-
 /*
 	함수 이름 : UserCollection
 	기능	  : UerCollection의 초기 값 지정 이때, user에 Admin의 id, pw 정보를 넣어준다.
